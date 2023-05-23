@@ -1,0 +1,25 @@
+1. Python 
+Update your route file with the render_template method
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+2. Create 
+Create a new folder called "templates" and inside add index.html 
+
+Create a templates folder
+
+3. Write some basic HTML inside index.html
+<html>
+	<head>
+		<title>Flask App</title>
+	</head>
+	<body>
+		<h1>Hello I'm HTML</h1>
+	</body>
+</html>
+4. View the page in your browser 
+In the browser, you should now see your rendered HTML page. The URL will likely be 127.0.0.1:500
