@@ -1,0 +1,21 @@
+1. Create header and footer includes 
+index.html
+
+{% include 'header.html' %}
+
+	<h1>Homepage</h1>
+
+{% include 'footer.html' %}
+2. Move the head of your HTML into the header.html file 
+header.html 
+
+<html>
+	<head>
+		<title>
+			Homepage
+		</title>
+	</head>
+	<body>
+		<a href="/">Homepage</a>
+		<a href="/about">About Me</a>
+		<a href="/contact">Contact</a>
