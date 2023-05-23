@@ -1,0 +1,36 @@
+Ready for the answers? Let's walk through the answers, step by step.
+
+The first step is to define the function, using the syntax we covered in the last couple videos. It should look like this: 
+
+def uppercase_and_reverse(text):
+Now, we need to actually build functionality (see what I did there?) inside of the function. Specifically we need to uppercase and reverse the text. The uppercasing is pretty straightforward: 
+
+def uppercase_and_reverse(text):
+    uppercase_text = text.upper()
+.upper() takes care of that. But the reversing is a little trickier. 
+
+def uppercase_and_reverse(text):
+    uppercase_text = text.upper()
+    reverse_and_uppercase_text = uppercase_text[::-1]
+    return reverse_and_uppercase_text
+This solution gets you there, but it's a little long. There's actually a simpler way to accomplish the same reversal. We can combine lines 33 and 34. Like so:
+
+def uppercase_and_reverse(text):
+    uppercase_text = text.upper()
+    return uppercase_text[::-1]
+We can also run both parts of this function on the same line. This is called chaining. 
+
+def uppercase_and_reverse(text):
+    return text.upper()[::-1]
+This is a very simple, clean way of running the function. You can reverse the order, it's simply chained together. 
+
+And remember, if we were to define a function reverse(text) like this: 
+
+def uppercase_and_reverse(text):
+    return reverse(text.upper())
+    
+def reverse(text):
+    return text [::-1]
+
+print(uppercase_and_reverse("banana")) # ANANAB
+It doesn't matter that it comes after our function uppercase_and_reverse(text). The only thing that matters is that it exist before its called to do anything on line 37. But it's a good idea to keep things in order. 
