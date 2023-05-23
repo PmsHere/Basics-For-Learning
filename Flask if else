@@ -1,0 +1,43 @@
+1. Pass parameters to your template 
+hello.py 
+
+from flask import Flask, render_template
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    title = "Homepage"	
+    return render_template("index.html", title=title)
+
+@app.route("/about")
+def about():
+    title = "About"	
+    return render_template("about.html",title=title)
+
+@app.route("/contact")
+def contact():
+    title = "Contact"	
+    return render_template("contact.html",title=title)
+2.  And use if, elif, else, and end as conditionals in your HTML  
+header.html 
+
+<html>
+	<head>
+		<title>
+
+			{% if title=="About" %}
+			About Page | OneMonth.com
+			{% elif title=="Contact" %}
+			Contact Page
+			{% else %}
+			OneMonth.com
+			{% endif %}
+
+
+		</title>
+
+	</head>
+	<body>
+		<a href="/">Homepage</a>
+		<a href="/about">About Me</a>
+		<a href="/contact">Contact</a>
