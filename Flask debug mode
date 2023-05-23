@@ -1,0 +1,9 @@
+Make life easier on yourself with debug mode 
+Every time you make a change in you're Python code, you'll have quit, and restart the server. Annoying right? Run this export FLASK_ENV command and your Python code will update in real-time, without having to restart: 
+
+$ export FLASK_ENV=development
+If for some reason that didn't work, try adding these two lines to the bottom of your file: 
+
+if __name__=="_main_":
+    app.run(debug=True)
+Note: The first time you add this code you'll need to shut down the Flask server and restart it. 
